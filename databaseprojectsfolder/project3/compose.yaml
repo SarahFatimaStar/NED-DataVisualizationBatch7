@@ -1,0 +1,21 @@
+version: '3.8'
+name : postgress_sytemmm
+services:
+  postgress_db:
+    image: postgres:latest
+    restart: always
+    container_name: PostgresConttt
+    environment:
+      - POSTGRES_USER=sarah
+      - POSTGRES_PASSWORD=psql -U postgres
+      - POSTGRES_DB=mydatabase1
+    ports:
+      - '5433:5432'
+    volumes:
+      - postgress_db:/var/lib/postgresql/data
+volumes:
+  postgress_db:
+    driver: local
+networks:
+  default:
+    driver: bridge
