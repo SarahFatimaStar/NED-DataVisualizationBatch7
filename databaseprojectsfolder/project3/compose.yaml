@@ -7,7 +7,7 @@ services:
     container_name: PostgresConttt
     environment:
       - POSTGRES_USER=sarah
-      - POSTGRES_PASSWORD=psql -U postgres
+      - POSTGRES_PASSWORD=my_password
       - POSTGRES_DB=mydatabase1
     ports:
       - '5433:5432'
