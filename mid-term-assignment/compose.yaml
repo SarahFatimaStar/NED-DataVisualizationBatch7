@@ -1,14 +1,14 @@
 version: '3.8'
-name: postgress_system_mt
+name: postgress_systems
 services:
   postgress_db:
     image: postgres:latest
     restart: always
-    container_name: postgres_cont_mt
+    container_name: postgres_container
     environment:
       - POSTGRES_USER=sarah
       - POSTGRES_PASSWORD=my_password
-      - POSTGRES_DB=myschooldatabase
+      - POSTGRES_DB=databaseschool
     ports:
       - '5433:5432'
     volumes:
